@@ -1,0 +1,48 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "An appointment system built on node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.7.0",
+    "mongoose": "^8.1.1",
+    "moment": "^2.30.1",
+    "body-parser": "^1.20.2",
+    "fs-extra": "^11.2.0",
+    "json2xls": "^0.1.2",
+    "exceljs": "^4.4.0",
+    "xlsx": "^0.18.5",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "cookie-parser": "^1.4.7",
+    "uuid": "^11.1.0",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "docx": "^9.4.1",
+    "path": "^0.12.7",
+    "socket.io": "^4.8.1",
+    "http": "^0.0.0",
+    "pidusage": "^4.0.1",
+    "moment-timezone": "^0.5.48",
+    "fs-promise": "^2.0.3"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

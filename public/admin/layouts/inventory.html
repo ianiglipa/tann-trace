@@ -1,0 +1,24 @@
+<section id="inventory" class="inventory section-content">
+  <div class="inventory-page">
+    <div class="inventory-separator" id="stock-separator">
+
+      <!-- ── Filter Controls ── -->
+      <div class="search-card">
+        <div class="input-group input-group-sm w-auto">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input id="inventory-search" type="search" class="form-control" placeholder="Search products…" />
+        </div>
+        <select id="inventory-filter" class="form-select form-select-sm w-auto">
+          <option value="all">All Stocks</option>
+          <option value="low">Understock Items</option>
+          <option value="high">Overstock items</option>
+        </select>
+        <button id="inventory-refresh" class="action-button"><i class="bi bi-arrow-clockwise"></i> Refresh</button>
+      </div>
+      <!-- ── end controls ── -->
+
+      <div class="inventory-card" id="inventory-card"></div>
+    </div>
+    <div class="product-details-card" style="display: none"></div>
+  </div>
+</section>

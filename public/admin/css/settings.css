@@ -1,0 +1,41 @@
+:root {
+    --white: #fcfcfc;
+    --light-gray: #e3e3e3;
+    --red: #981414;
+    --yellow: #ffd41c;
+    --secondary-yellow: #ffe365;
+    --black: #363636;
+    --green: #009926;
+}
+.settings {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+.login-sessions-card {
+  width: 90%;
+  max-width: 1000px;
+    margin: auto;
+}
+#accountCreationForm .form-group,
+#settingsForm .form-group {
+  flex: 1 1 calc(50% - 0.5rem);
+  min-width: 250px;
+}
+
+.settings-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.settings-form .editable-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-form .editable-field input {
+  flex: 1;
+  margin-right: 10px;
+}

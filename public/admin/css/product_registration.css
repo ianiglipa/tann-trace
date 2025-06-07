@@ -1,0 +1,90 @@
+:root {
+    --white: #fcfcfc;
+    --light-gray: #e3e3e3;
+    --red: #981414;
+    --yellow: #ffd41c;
+    --secondary-yellow: #ffe365;
+    --black: #363636;
+    --green: #009926;
+    --blue: #36559b;
+    --darkblue: #2d467e;
+    --lightblue: #6185d7;
+}
+
+.product_registration {
+  display: block;
+  justify-content: center;
+}
+.separator {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* same as end, but standard */
+  
+  width: 100%;
+  height: auto;    /* grow based on content */
+  min-height: 100%;
+
+  box-sizing: border-box; /* optional but safer */
+}
+.register-card {
+  width: 75%;
+  height: auto;       /* grow based on content */
+  min-height: auto;   /* override the forced min-height */
+  
+  padding: 1.5rem;
+  border: 5px solid var(--blue);
+  border-radius: 16px 0 0 16px;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* make padding count inside width */
+}
+.categories-card {
+  width: 20%;
+  height: auto;
+  min-height: auto;  
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 0 16px 16px 0;
+  background-color: var(--blue);
+  box-sizing: border-box;
+}
+
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.notification {
+  display: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .register-card {
+  width: 60%;
+  }
+  .categories-card {
+  width: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .register-card {
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: none;
+    min-height: auto;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}

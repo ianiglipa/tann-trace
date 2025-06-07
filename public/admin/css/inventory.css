@@ -1,0 +1,252 @@
+:root {
+  --white: #fcfcfc;
+  --light-gray: #e3e3e3;
+  --red: #981414;
+  --yellow: #ffd41c;
+  --secondary-yellow: #ffe365;
+  --black: #363636;
+  --green: #009926;
+  --blue: #36559b;
+}
+.search-card {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  padding: 5px;
+  padding-left: 2rem;
+}
+.inventory-separator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.category-row {
+  margin-bottom: 10px;
+}
+.inventory-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.qr-code {
+  margin-top: 0.5rem;
+  width: 50%;
+  align-self: center;
+  height: auto;
+}
+#downloadQrBtn {
+  width: 50%;
+  border-radius: 0px 0px 12px 12px;
+}
+#refreshBtn,
+#downloadAllData {
+  margin: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#download-data-form {
+  max-width: 250px;
+}
+.inventory-card {
+  width: 98%;
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: transparent;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+}
+.create-stock-record {
+  width: 20%;
+  height: 100%;
+  border-radius: 16px;
+  padding: 5px;
+  border-radius: 0px 16px 16px 0px;
+  color: white;
+  background-color: var(--blue);
+}
+.product-details-card {
+  width: 98%;
+  min-height: 100%;
+  border-radius: 16px;
+  background-color: transparent;
+  flex-direction: column;
+}
+.category-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.scroll-container {
+  margin-top: 10px;
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+.product-card {
+  min-width: 150px;
+  background: var(--white);
+  color: var(--black);
+  padding: 16px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.product-card:not(:disabled):hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.divider {
+  border-top: 2px solid #7a7a7a;
+  margin-bottom: 30px;
+}
+
+.detail-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* left column narrow */
+.detail-left {
+  flex: 1;
+  color: white;
+  border-radius: 16px 0px 0px 16px;
+  padding: 1rem;
+}
+
+/* right column wider */
+.detail-right {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 16px;
+  border: 5px solid var(--blue);
+  overflow: hidden;
+}
+.record-holder {
+  flex: 1;
+  height: 75%;
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+}
+.record-holder2 {
+  height: 25%;
+  display: flex;
+  gap: 1rem;
+  background-color: var(--blue);
+}
+
+.qty {
+  font-weight: bold;
+}
+/* green for incoming */
+.qty.in {
+  color: var(--green);
+}
+
+/* red for outgoing */
+.qty.out {
+  color: var(--red);
+}
+.in-records,
+.out-records {
+  background: transparent;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+.record-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.record-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.delete-record-btn {
+  background: transparent;
+  border: none;
+  color: var(--black);
+  margin-left: auto;
+  font-size: 1.2rem;
+}
+.delete-record-btn:hover {
+  color: var(--red) !important;
+}
+.stockRecordForm {
+  margin-top: 10px;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 50%;
+}
+.stockRecordForm .form-group label {
+  color: white;
+  margin-right: 1rem;
+}
+.stock-record-btn {
+  background: var(--white);
+  border: none;
+  color: var(--black);
+  margin-left: auto;
+}
+.stock-record-btn:hover {
+  color: var(--blue) !important;
+}
+
+@media screen and (max-width: 1600px) {
+  .qr-code {
+    width: 45%;
+  }
+  #downloadQrBtn {
+    width: 45%;
+  }
+  .record-content {
+    font-size: 12px;
+  }
+  #editProductForm .form-group {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 150px;
+  }
+  #editProductForm .form-group label {
+    font-size: 12px;
+  }
+  .record-holder {
+    height: 70%;
+  }
+  .record-holder2 {
+    height: 30%;
+  }
+}
